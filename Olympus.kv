@@ -1,0 +1,465 @@
+
+
+Scroll:
+
+<Scroll>:
+    MyGrid:
+        size_hint: 1, None
+        height: 2000
+
+<HomeScreen>:
+
+
+
+
+
+<MyGrid>:
+    rows: 6
+    cols: 1
+    spacing: dp(20)
+    padding: dp(50)
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+
+
+    GridLayout:
+        rows: 2
+        cols: 1
+        canvas.before:
+            Rectangle:
+                source: "image-hero.jpg"
+                size: self.size
+                pos: self.pos
+
+
+        GridLayout:
+            cols: 2
+            rows: 2
+            padding: dp(50)
+
+
+
+            GridLayout:
+                cols: 2
+                rows: 4
+
+                Label:
+                    text: "loopstudios"
+                    valign: "top"
+                    halign: "left"
+                    bold: True
+                    font_size: "20sp"
+                Label:
+                Label:
+                Label:
+                Label:
+                Label:
+                Label:
+
+
+
+
+            GridLayout:
+                rows: 3
+                cols: 1
+                GridLayout:
+                    rows: 1
+                    cols: 7
+                    spacing: dp(20)
+
+                    Label:
+                    Label:
+
+                    MDTextButton:
+                        text: "About"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                    MDTextButton:
+                        text: "Careers"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+
+                    MDTextButton:
+                        text: "Events"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                    MDTextButton:
+                        text: "Products"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                    MDTextButton:
+                        text: "Support"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                Label:
+                Label:
+
+
+            Label:
+                text:  " I M M E R S I V E \n E X P E R I E N C E S \n T H A T D E L I V E R"
+                font_size: dp(25)
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        width: 2
+                        rectangle: (*self.pos, *self.size)
+
+
+    FloatLayout:
+        id: layout
+        size_hint: .6, 1
+
+
+        Label:
+            id: img
+            size_hint: .5,None
+            height:  layout.height #- dp(20)
+            pos: layout.x + dp(20), layout.center_y - self.height/2
+            canvas:
+                Rectangle:
+                    source: "image-interactive.jpg"
+                    size: self.size
+                    pos: self.pos
+
+
+
+        GridLayout:
+            cols: 1
+            rows: 3
+            adaptive_height: True
+            size_hint: .7, 1
+            x: (layout.right - img.right)/5 + self.width/2
+            y: layout.top - self.height
+
+
+            MDLabel:
+                opacity: 0
+                canvas.before:
+                    Color:
+                        rgba: 1, 0, 1, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+            MDLabel:
+                text: " T H E   L E A D E R \n   I N T E R A C T I V E"
+                color: (0, 0, 0, 1)
+                font_size: dp(30)
+                halign: "center"
+
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+            Label:
+                text: " Founded in 2011, Loopstudios has been producing world-class \n virtual reality projects for some of the best companies around the \n globe. Our award-winning creations have transformed \n businesses through digital experiences that bind to their brand."
+                color: 0, 0, 0, .4
+
+                halign: "center"
+                background_normal: ""
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+
+
+
+    GridLayout:
+        rows: 1
+        cols: 3
+        padding: dp(50)
+        size_hint: 1, .2
+
+        Label:
+            text: "OUR CREATIONS"
+            font_size: dp(30)
+            color: 0, 0, 0, 1
+            halign: "center"
+            background_color: 1, 0, 0, 1
+
+
+
+        Label:
+        Button:
+            text: "S E E   A L L"
+            color: 1, 1, 1, 1
+            background_color: 0, 0, 0, 1
+
+    GridLayout:
+        rows: 2
+        cols: 4
+        padding: dp(50)
+        size_hint: 1, None
+        height: root.height/2.5
+
+        spacing: dp(20)
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-deep-earth.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+            MDTextButton:
+                text: "    DEEP \n    EARTH \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-night-arcade.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+            MDTextButton:
+                text: "    NIGHT \n    ARCADE \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-soccer-team.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+            MDTextButton:
+                text: "    SOCCER \n    TEAM VR \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+
+
+
+
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-grid.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+            MDTextButton:
+                text: "    THE  \n    GRID \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-from-above.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: self.size
+            MDTextButton:
+                text: "    FROM LP  \n    ABOVE VR \n  "
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-pocket-borealis.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+            MDTextButton:
+                text: "    ROCKET  \n    BOREALIS \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-curiosity.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .2
+                size: self.size
+            MDTextButton:
+                text: "    THE  \n    CURIOSITY \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+        GridLayout:
+            cols: 1
+            rows: 2
+            id: x
+            #padding: dp(20)
+            canvas:
+                Rectangle:
+                    source: "image-fisheye.jpg"
+                    size: self.size
+                    pos: self.pos
+            Button:
+                opacity: .1
+                size: x.size
+
+            MDTextButton:
+                text: "    MAKE IT  \n    FISHEYE \n"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+
+
+
+
+
+
+    GridLayout:
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 1
+
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        size_hint: 1, .4
+        rows: 2
+        cols: 1
+        padding: dp(30)
+
+        GridLayout:
+            cols: 8
+            rows: 1
+            Label:
+                text: "loopstudios"
+                color: 1, 1, 1, 1
+                halign:  "left"
+                bold: True
+            Label:
+            Label:
+            Label:
+
+
+            MDIconButton:
+                icon: "facebook"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+            MDIconButton:
+                icon: "twitter"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+            MDIconButton:
+                icon: "pinterest"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+            MDIconButton:
+                icon: "instagram"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+
+
+        GridLayout:
+            rows: 1
+            cols: 8
+            spacing: dp(20)
+            Label:
+                size_hint: .15, 1
+
+            MDTextButton:
+                text: "About"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                font_size: dp(12)
+
+            MDTextButton:
+                text: "Careers"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                font_size: dp(12)
+
+            MDTextButton:
+                text: "Events"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                font_size: dp(12)
+
+            MDTextButton:
+                text: "Products"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                font_size: dp(12)
+
+            MDTextButton:
+                text: "Support"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                font_size: dp(12)
+
+            Label:
+
+            Label:
+                text: "(c) 2021 loopstudios. All rights reserved."
+                font_size: dp(10)
+                halign: "right"
+
